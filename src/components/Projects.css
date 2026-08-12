@@ -1,0 +1,106 @@
+.projects {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.projects__title {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(
+    160deg,
+    rgba(245, 243, 250, 0.05),
+    rgba(245, 243, 250, 0.015)
+  );
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--cyan);
+  box-shadow: 0 16px 40px -16px color-mix(in srgb, var(--cyan) 45%, transparent);
+}
+
+.project-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card__name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.project-card__badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.project-card__forked {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--purple);
+  font-weight: 500;
+}
+
+.project-card__desc {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.project-card__footer {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card__tech {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.project-card__tech-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.project-card__link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cyan);
+}
