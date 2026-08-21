@@ -65,12 +65,14 @@
 }
 
 .navbar__links a:hover,
-.navbar__links a:focus-visible {
+.navbar__links a:focus-visible,
+.navbar__links a[aria-current="page"] {
   color: var(--text);
 }
 
 .navbar__links a:hover::after,
-.navbar__links a:focus-visible::after {
+.navbar__links a:focus-visible::after,
+.navbar__links a[aria-current="page"]::after {
   width: 100%;
 }
 
@@ -131,6 +133,10 @@
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--text);
+}
+
+.navbar__mobile a[aria-current="page"] {
+  color: var(--cyan);
 }
 
 @media (min-width: 860px) {

@@ -28,3 +28,20 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+export interface HobbyItem {
+  id: string;
+  title: string;
+  eyebrow: string;
+  description: string;
+  accent: string;
+  link?: {
+    label: string;
+    href: string;
+  };
+  image?: {
+    src: string;
+    alt: string;
+  };
+  youtubeId?: string;
+}

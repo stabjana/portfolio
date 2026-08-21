@@ -5,6 +5,7 @@ import { navLinks } from '../data';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const currentPath = window.location.pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -18,16 +19,22 @@ export default function Navbar() {
   return (
     <>
       <header className={`navbar${scrolled ? ' is-scrolled' : ''}`}>
-        <a href="#home" className="navbar__mark">
+        <a href="/#home" className="navbar__mark">
           Steffi Jana
         </a>
 
         <ul className="navbar__links">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.href === '/hobbies' && currentPath === '/hobbies';
+
+            return (
+              <li key={link.href}>
+                <a href={link.href} aria-current={isActive ? 'page' : undefined}>
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <button
@@ -44,11 +51,15 @@ export default function Navbar() {
       </header>
 
       <nav className={`navbar__mobile${open ? ' is-open' : ''}`} aria-hidden={!open}>
-        {navLinks.map((link) => (
-          <a key={link.href} href={link.href} onClick={handleLinkClick}>
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map((link) => {
+          const isActive = link.href === '/hobbies' && currentPath === '/hobbies';
+
+          return (
+            <a key={link.href} href={link.href} aria-current={isActive ? 'page' : undefined} onClick={handleLinkClick}>
+              {link.label}
+            </a>
+          );
+        })}
       </nav>
     </>
   );
