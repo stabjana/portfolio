@@ -192,13 +192,14 @@ export const hobbies: HobbyItem[] = [
     title: "Being Outside & other Hobbies",
     eyebrow: "I am explorer",
     description:
-      "I need fresh air to breathe, and being outside makes me feel free. Scientists say its good for the mental an physical health, I feel more calm when I am in the forest or at the shore.  I have many other hobbies and interests that I enjoy exploring and developing, I am not doing all of them still, but I would if I had more time.  For example knitting, brewing my own beer, sewing, crafting and many other things.",
+      "I need fresh air to breathe, and being outside summer and winter! makes me feel free. Scientists say its good for the mental an physical health, I feel more calm when I am in the forest or at the shore.  I have many other hobbies and interests that I enjoy exploring and developing, I am not doing all of them still, but I would if I had more time.  For example knitting, brewing my own beer, sewing, crafting and many other things.",
     accent: "var(--indigo)",
     image: {
       src: "/hobbies/nature.jpg",
       alt: "Steffi being outside",
     },
   },
+  /*
   {
     id: "music",
     title: "Singing and Playing Music",
@@ -209,6 +210,19 @@ export const hobbies: HobbyItem[] = [
     image: {
       src: "/hobbies/music.jpg",
       alt: "Steffi playing music",
+    },
+  },
+  */
+  {
+    id: "gardening",
+    title: "Gardening",
+    eyebrow: "Community Garden",
+    description:
+      "I like my little garden box in our dodo comunity garden. I am also organizing the gardening group and help with the communication between the city, dodo and the other gardeners.",
+    accent: "var(--indigo)",
+    image: {
+      src: "/hobbies/gardening.jpg",
+      alt: "Steffi in the garden",
     },
   },
 ];
