@@ -6,7 +6,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/stefanie-jana-a0b094a8/';
 
 // Swap this for the real photo later, e.g.:
 // <img src="/steffi.jpg" alt="Portrait of Stefanie Jana" />
-const PORTRAIT_IMAGE_SRC: string | null = null;
+const PORTRAIT_IMAGE_SRC: string | null = '/steffi.jpg';
 
 export default function Hero() {
   return (
