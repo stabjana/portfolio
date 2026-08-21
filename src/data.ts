@@ -9,9 +9,9 @@ export const navLinks: NavLink[] = [
 ];
 
 export const aboutParagraphs: string[] = [
-  `Hello, I'm Steffi, a former archaeologist and now a full-stack developer who enjoys working with people as much as with technology. My background in archaeology gave me a lot of experience in team coordination, documenting complex work (partly in Finnish!) and keeping projects running smoothly and on schedule. These skills turned out to be surprisingly helpful in software development and in product-oriented work.`,
+  `Hello, I'm Steffi, an aspiring Full Stack Developer with a focus on UX, API design and Product Ownership. I work with React, NodeJS, NestJS, PostreSQL and Agile. I help shipping products and bring people together.`,
   `During my studies at Business College Helsinki and especially during my internship, I have noticed that I really enjoy both sides of tech: building things with React, TypeScript, NestJS and Supabase, and understanding why we build them and for whom. I like talking to users or customers, turning their needs into something clear and structured, and helping a team stay focused on the most urgent tasks.`,
-  `In our internship project I worked in a small, self-organized team where we built a multi-tenant booking app called Harakka. We had a supervisor for support, but most of the project was handled by our self-organized team. Besides coding and fixing bugs, I also took care of sprint planning, customer discussions, prioritizing tasks, organizing meetings, reviewing pull requests and making sure we included all important feedback. Taking on these responsibilities really confirmed that I enjoy working between development and product.`,
+  `In my first internship project I worked in a small, self-organized team where we built a multi-tenant booking app called Harakka. We had a supervisor for support, but most of the project was handled by our self-organized team. Besides coding and fixing bugs, I also took care of sprint planning, customer discussions, prioritizing tasks, organizing meetings, reviewing pull requests and making sure we included all important feedback. Taking on these responsibilities really confirmed that I enjoy working between development and product.`,
   `Right now I am focused on growing as a developer and getting more real-world experience. I'm also building an MVP in React Native with Python and machine learning, and getting more experience in development and API design. In the long run I would love to move into a Product Owner or Associate Product Manager role, and use both my technical skills and my people skills to support a team.`,
   `If you're looking for someone who can connect product thinking with coding, communicates well and enjoys working in a friendly and collaborative way, feel free to reach out.`,
 ];
@@ -19,9 +19,9 @@ export const aboutParagraphs: string[] = [
 export const bioEntries: BioEntry[] = [
   {
     id: "nutrilyser",
-    date: "Nov 2025 — Present",
+    date: "Nov 2025 - Present",
     sortKey: "2025-11",
-    role: "Mobile Developer Intern",
+    role: "Junior Full-Stack Developer (Mobile)",
     org: "Nutrilyser",
     accent: "var(--pink)",
     description:
@@ -81,8 +81,8 @@ export const bioEntries: BioEntry[] = [
 
 export const projects: Project[] = [
   {
-    id: "Harakka Booking Service",
-    name: "harakka",
+    id: "harakka",
+    name: "Harakka Booking Service",
     url: "https://github.com/stabjana/harakka",
     forkedFrom: {
       label: "con2/harakka",

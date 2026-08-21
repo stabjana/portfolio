@@ -3,7 +3,7 @@ import '../styles/contact.css';
 
 type Status = 'idle' | 'sending' | 'sent';
 
-const EMAIL = 'stefanie.k.jana@gmail.com';
+const EMAIL = 'steff.dev.jana@gmail.com';
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>('idle');
@@ -28,8 +28,8 @@ export default function Contact() {
         <div className="contact__layout">
           <div className="contact__intro">
             <p>
-              Looking for someone who connects product thinking with code? I'd love to
-              hear from you — reach out here or find me directly below.
+              Are you looking for someone who connects product thinking with code? I'd love to
+              hear from you! Reach out here or find me directly below.
             </p>
             <div className="contact__direct">
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>

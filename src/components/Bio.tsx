@@ -2,7 +2,7 @@ import '../styles/bio.css';
 import { bioEntries } from '../data';
 
 // Experience and education are intentionally merged into one chronological
-// timeline with a single "Bio" heading — no "Experience" / "Education"
+// timeline with a single "Bio" heading - no "Experience" / "Education"
 // sub-headings, per the brief.
 export default function Bio() {
   const sorted = [...bioEntries].sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
