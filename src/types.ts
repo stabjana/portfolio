@@ -43,5 +43,10 @@ export interface HobbyItem {
     src: string;
     alt: string;
   };
+  footerImage?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
   youtubeId?: string;
 }

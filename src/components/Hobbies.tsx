@@ -51,6 +51,19 @@ function HobbyCard({ hobby }: { hobby: HobbyItem }) {
         <h2>{hobby.title}</h2>
         <p>{hobby.description}</p>
 
+        {hobby.footerImage && (
+          <div className="hobby-card__footer-image">
+            {hobby.footerImage.caption && (
+              <span className="hobby-card__footer-caption">{hobby.footerImage.caption}</span>
+            )}
+            <img
+              src={hobby.footerImage.src}
+              alt={hobby.footerImage.alt}
+              loading="lazy"
+            />
+          </div>
+        )}
+
         {hobby.link && (
           <a className="hobby-card__link" href={hobby.link.href} target="_blank" rel="noreferrer noopener">
             {hobby.link.label}

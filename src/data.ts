@@ -138,6 +138,11 @@ export const hobbies: HobbyItem[] = [
       label: "Listen on Spotify",
       href: "https://open.spotify.com/show/69xh1rMg3LYfptNTC5mcTe",
     },
+    footerImage: {
+      src: "/hobbies/podcast.jpg",
+      alt: "Steffi listening to podcast",
+      caption: "Currently listening to",
+    },
   },
   {
     id: "climbing",
@@ -161,6 +166,11 @@ export const hobbies: HobbyItem[] = [
     link: {
       label: "Open Instagram",
       href: "https://www.instagram.com/stabjana/",
+    },
+    footerImage: {
+      src: "/hobbies/instagram-latest.jpg",
+      alt: "Preview of Steffi's latest Instagram post",
+      caption: "Food posts",
     },
   },
   {

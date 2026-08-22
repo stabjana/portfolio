@@ -20,11 +20,13 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-muted);
-  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+  transition:
+    color 0.2s var(--ease),
+    transform 0.2s var(--ease);
 }
 
 .hobbies-page__back::before {
-  content: '<-';
+  content: "<-";
   color: var(--cyan);
 }
 
@@ -44,7 +46,12 @@
   font-size: clamp(3.2rem, 9vw, 7rem);
   font-style: italic;
   line-height: 0.92;
-  background: linear-gradient(110deg, var(--text) 28%, var(--cyan) 62%, var(--pink) 100%);
+  background: linear-gradient(
+    110deg,
+    var(--text) 28%,
+    var(--cyan) 62%,
+    var(--pink) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -71,7 +78,11 @@
   display: flex;
   flex-direction: column;
   background:
-    linear-gradient(145deg, color-mix(in srgb, var(--c) 13%, transparent), transparent 42%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--c) 13%, transparent),
+      transparent 42%
+    ),
     rgba(18, 12, 34, 0.72);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -79,7 +90,7 @@
 }
 
 .hobby-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -115,8 +126,16 @@
   gap: 0.45rem;
   color: var(--text-muted);
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--c) 20%, transparent), transparent),
-    repeating-linear-gradient(135deg, rgba(245, 243, 251, 0.07) 0 1px, transparent 1px 18px);
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--c) 20%, transparent),
+      transparent
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(245, 243, 251, 0.07) 0 1px,
+      transparent 1px 18px
+    );
 }
 
 .hobby-card__photo-placeholder span {
@@ -185,6 +204,31 @@
 .hobby-card__link:hover span,
 .hobby-card__link:focus-visible span {
   transform: translate(3px, -3px);
+}
+
+.hobby-card__footer-image {
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.hobby-card__footer-caption {
+  display: block;
+  font-family: var(--font-utility, inherit);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint, var(--text-muted));
+  margin-bottom: 8px;
+}
+
+.hobby-card__footer-image img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong, var(--line));
+  display: block;
 }
 
 @media (min-width: 920px) {
