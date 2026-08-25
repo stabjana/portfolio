@@ -1,75 +1,54 @@
-# React + TypeScript + Vite
+# Stefanie Jana — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi, this is my personal portfolio site. A single page with my bio, projects and a way to reach me. Nothing fancy, just a clean place to point people to instead of a PDF.
 
-Currently, two official plugins are available:
+## About this project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Full honesty: this is about 80% vibecoded. I worked closely with Claude to build the structure, styling and components, and then went in myself to adjust content, fix bugs, tweak spacing and wire up the pieces I actually understood and cared about, like the contact form and the images. I think that's a totally normal way to build things in 2026 and I'm not going to pretend otherwise. I learned a lot along the way, and that's what matters to me.
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + TypeScript
+- Vite
+- Plain CSS (no framework, just custom properties for the color palette)
+- Formspree for the contact form (no backend needed)
 
-## Expanding the ESLint configuration
+## Running it locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+You'll need a \`.env\` file in the root with:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+\`\`\`
+VITE_FORMSPREE_ENDPOINT=your_formspree_endpoint_here
+\`\`\`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project structure
 
-```
+\`\`\`
+src/
+components/ -> Navbar, Hero, Bio, Projects, Hobbies, Contact
+data.ts -> all the actual content (bio entries, projects, hobbies)
+styles/ -> one CSS file per component
+public/
+hobbies/ -> photos used on the hobbies page
+\`\`\`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Content lives in \`data.ts\`, so if I want to update a project or add a new bio entry, I only touch that file, not the components.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## What's on the site
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Home / hero with a short intro
+- Bio, experience and education merged into one timeline, no need to separate them, it's all part of the same story
+- Projects, with links to the actual repos
+- A hobbies page, because I'm more than my job title
+- A contact form that actually sends me an email
 
-```
+## Contact
+
+steff.dev.jana@gmail.com
+[github.com/stabjana](https://github.com/stabjana)
+[linkedin.com/in/stefanie-jana](https://www.linkedin.com/in/stefanie-jana-a0b094a8/)
