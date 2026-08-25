@@ -1,6 +1,7 @@
 # Stefanie Jana — Portfolio
 
 Hi, this is my personal portfolio site. A single page with my bio, projects and a way to reach me. Nothing fancy, just a clean place to point people to instead of a PDF.
+Deployed on render: [Steffi Jana](https://portfolio-b0cd.onrender.com).
 
 ## About this project
 
