@@ -21,7 +21,7 @@ export const bioEntries: BioEntry[] = [
     id: "nutrilyser",
     date: "Nov 2025 - Present",
     sortKey: "2025-11",
-    role: "Junior Full-Stack Developer (Mobile)",
+    role: "Junior Full-Stack Developer (Mobile App)",
     org: "Nutrilyser",
     accent: "var(--pink)",
     description:
@@ -29,19 +29,19 @@ export const bioEntries: BioEntry[] = [
   },
   {
     id: "illusia",
-    date: "May 2025 — Oct 2025",
+    date: "May 2025 - Oct 2025",
     sortKey: "2025-05",
     role: "Full Stack Development Intern",
-    org: "Illusia Ry",
+    org: "Illusia Ry - Harakka Booking Service",
     accent: "var(--purple)",
     description:
-      "We shipped our first full-stack booking app to a real customer, turning what started as a school project into a fully professional production system built with React, TypeScript, Tailwind, NestJS and Supabase. By helping each other we managed to deliver a scalable, multi-tenant app we\u2019re really proud of — you can find the project in my GitHub.",
+      "We shipped our first full-stack booking web-app to a real customer, turning what started as a school project into a fully professional production system built with React, TypeScript, Tailwind, NestJS and Supabase. By helping each other we managed to deliver a scalable, multi-tenant app we\u2019re really proud of — you can find the project in my GitHub.",
   },
   {
     id: "business-college",
-    date: "Aug 2024 — Dec 2025",
+    date: "Aug 2024 - Dec 2025",
     sortKey: "2024-08",
-    role: "Full Stack Web Developer Program",
+    role: "Vocational Qualification in ICT, Full Stack Web Development",
     org: "Business College Helsinki",
     accent: "var(--indigo)",
     description:
@@ -49,33 +49,33 @@ export const bioEntries: BioEntry[] = [
   },
   {
     id: "museovirasto",
-    date: "May 2021 — Aug 2024",
+    date: "May 2021 - Aug 2024",
     sortKey: "2021-05",
     role: "Apulaistutkija (Assistant Researcher)",
     org: "Museovirasto — Finnish Heritage Agency",
     accent: "var(--blue)",
     description:
-      "Learned how Finnish excavations are managed — including getting a GPS signal in the forest, then continuing measurements with the tachymeter in the bushes. Deepened my knowledge of construction-site safety and Finnish archaeology, and saw first-hand how important open communication is between field teams and other companies sharing a site.",
+      "I learned how finnish excavations are managed, how you can get GPS signal in the forest (and then continuing measurements with the Tachymeter in the bushes).\nI learned a lot about team collaboration and saw how important it is to maintain open communication with either students working in the field or also the other companies working in the same place.",
   },
   {
     id: "archaeotask",
-    date: "Aug 2020 — Feb 2021",
+    date: "Aug 2020 - Feb 2021",
     sortKey: "2020-08",
-    role: "Field Archaeologist",
+    role: "Researcher & Field Archaeologist",
     org: "ArchaeoTask GmbH",
     accent: "var(--cyan)",
     description:
-      "A wide variety of organisational tasks across construction sites — finding creative ways to make impossible requirements possible in order to keep to schedule, and learning how to motivate a team and keep it happy even when circumstances were difficult. Having fun at work matters.",
+      "As an assistant researcher and researcher I have had a wide variety of organisational tasks on various construction sites. I have learned to make impossible requirements possible with creative measures in order to keep to schedules. I have learned how to motivate a team and keep them happy, even though circumstances are sometimes difficult. Having fun at work is so important.",
   },
   {
     id: "freiburg",
-    date: "Oct 2004 — Jan 2013",
+    date: "Oct 2004 - Jan 2013",
     sortKey: "2004-10",
-    role: "Magister Artium, Archaeology",
+    role: "Magister Artium (M.A.), Archaeology",
     org: "University of Freiburg, Germany",
     accent: "var(--green)",
     description:
-      'Studied prehistoric archaeology, Near Eastern archaeology and geology. Thesis: "Untersuchungen zu kupferzeitlichen Augenidolen auf der Iberischen Halbinsel" (Copper Age eye idols of the Iberian Peninsula), supervised by Prof. Dr. Christoph Huth.',
+      'I studied and graduated in prehistoric archaeology, Near Eastern archaeology and geology. Thesis: "Untersuchungen zu kupferzeitlichen Augenidolen auf der Iberischen Halbinsel" (Copper Age eye idols of the Iberian Peninsula), supervised by Prof. Dr. Christoph Huth.',
   },
 ];
 

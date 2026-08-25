@@ -74,7 +74,9 @@
   font-family: var(--font-body);
   font-size: 0.92rem;
   resize: vertical;
-  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  transition:
+    border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
 }
 
 .contact__field input:focus,
@@ -100,7 +102,10 @@
   color: var(--bg);
   background: linear-gradient(120deg, var(--cyan), var(--pink));
   cursor: pointer;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), opacity 0.2s var(--ease);
+  transition:
+    transform 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    opacity 0.2s var(--ease);
 }
 
 .contact__submit:hover:not(:disabled) {
@@ -117,6 +122,10 @@
   font-family: var(--font-utility);
   font-size: 0.82rem;
   color: var(--green);
+}
+
+.contact__status--error {
+  color: var(--red);
 }
 
 .footer {

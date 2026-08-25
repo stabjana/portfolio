@@ -1,23 +1,38 @@
 import { useState } from 'react';
 import '../styles/contact.css';
 
-type Status = 'idle' | 'sending' | 'sent';
+type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 const EMAIL = 'steff.dev.jana@gmail.com';
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>('idle');
 
-  // Dummy handler for now — no backend wired up yet.
-  // Swap this for a real request once you have an email endpoint, e.g.:
-  //   await fetch('/api/contact', { method: 'POST', body: formData })
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => {
-      setStatus('sent');
-      e.currentTarget.reset();
-    }, 900);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        setStatus('sent');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
   };
 
   return (
@@ -65,7 +80,12 @@ export default function Contact() {
             </button>
 
             {status === 'sent' && (
-              <span className="contact__status">Thanks! This is a demo form for now — I'll wire it up to email soon.</span>
+              <span className="contact__status">Thanks! Your message was sent successfully.</span>
+            )}
+            {status === 'error' && (
+              <span className="contact__status contact__status--error">
+                Something went wrong. Please try again or email me directly.
+              </span>
             )}
           </form>
         </div>
